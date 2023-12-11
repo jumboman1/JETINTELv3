@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Aircrafts</title>
+    <link rel="stylesheet" href="comafsstyles.css">
+
+
+</head>
+<body>
+
+  <!-- Load menubar.html dynamically -->
+  <div id="menubar-container"></div>
+  <script>
+    // Use fetch to load menubar.html
+    fetch('menubar.html')
+      .then(response => response.text())
+      .then(data => {
+        // Inject the content into the menubar-container
+        document.getElementById('menubar-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading menubar.html:', error));
+  </script>
+
+
+  <section class="container">
+    <h1 id="slogan-text">Commercial Aircrafts</h1>
+
+      <div class="card">
+        <img src="Airbus A220 2 Background Removed.png" alt="Airplane Image">
+        <h2>Airbus A220-300</h2>
+        <p>Capacity: 130-160 passengers<br>
+           Length: 38.7 meters<br>
+           Range: 3,350 nautical miles<br>
+           Maximum Cruise Speed: Mach 0.82<br></p>
+    </div>
+    <div class="card">
+      <img src="Airbus A320.png" alt="Airplane Image">
+      <h2>Airbus A320</h2>
+      <p>Capacity: 140-240 passengers<br>
+        Length: 37.6 meters<br>
+        Range: 3,300 nautical miles<br>
+        Maximum Cruise Speed: Mach 0.82<br></p>
+  </div>
+    <div class="card">
+        <img src="A330 neo 1 Background Removed.png" alt="Airplane Image">
+        <h2>Airbus A330</h2>
+        <p>Capacity: 250-440 passengers<br>
+          Length: 58.8 meters<br>
+          Range: 7,500 nautical miles<br>
+          Maximum Cruise Speed: Mach 0.86<br></p>
+    </div>
+    <div class="card">
+      <img src="Airbus A350 Background Removed.png" alt="Airplane Image">
+      <h2>Airbus A350</h2>
+      <p>Capacity: 325-440 passengers<br>
+        Length: 66.9 meters<br>
+        Range: 8,000 nautical miles<br>
+        Maximum Cruise Speed: Mach 0.85<br></p>
+  </div>
+</div>
+<div class="card">
+  <img src="Airbus A380 Background Removed.png" alt="Airplane Image">
+  <h2>Airbus A380</h2>
+  <p>Capacity: Up to 853 passengers<br>
+    Length: 72.7 meters<br>
+    Range: 8,000 nautical miles<br>
+    Maximum Cruise Speed: Mach 0.85<br></p>
+</div>
+</div>
+<div class="card">
+  <img src="Airbus a321xlr Background Removed.png" alt="Airplane Image">
+  <h2>Airbus A321XLR</h2>
+  <p>Capacity: 206 passengers<br>
+    Length: 44.5 meters<br>
+    Range: 4,700 nautical miles<br>
+    Maximum Cruise Speed: Mach 0.84<br></p>
+</div>
+
+<div class="card">
+  <img src="Boeing Nextgen737 Background Removed.png" alt="Airplane Image">
+  <h2>Boeing Next Generation 737</h2>
+  <p>Capacity: 85-215 passengers<br>
+    Length: 28.9 meters<br>
+    Range: 2,935 nautical miles<br>
+    Maximum Cruise Speed: Mach 0.79<br></p>
+</div>
+<div class="card">
+  <img src="Boeing 737 Max Background Removed.png" alt="Airplane Image">
+  <h2>Boeing 737 Max</h2>
+  <p>Capacity: 85-230 passengers<br>
+    Length: 39.5 meters<br>
+    Range: 3,850 nautical miles<br>
+    Maximum Cruise Speed: Mach 0.79<br></p>
+</div>
+<div class="card">
+  <img src="Boeing 747-8 Background Removed.png" alt="Airplane Image">
+  <h2>Boeing 747-8</h2>
+  <p>Capacity: Up to 467 passengers<br>
+    Length: 76.3 meters<br>
+    Range: 7,730 nautical miles<br>
+    Maximum Cruise Speed: Mach 0.855<br></p>
+</div>
+<div class="card">
+  <img src="Boeing 767 Background Removed.png" alt="Airplane Image">
+  <h2>Boeing 767</h2>
+  <p>Capacity: 181-375 passengers<br>
+    Length: 54.9 meters<br>
+    Range: 3,850 nautical miles<br>
+    Maximum Cruise Speed: Mach 0.80<br></p>
+</div>
+<div class="card">
+  <img src="Boeing 777 Background Removed.png" alt="Airplane Image">
+  <h2>Boeing 777</h2>
+  <p>Capacity: 317-550 passengers<br>
+    Length: 63.7 meters<br>
+    Range: 8,555 nautical miles<br>
+    Maximum Cruise Speed: Mach 0.84<br></p>
+</div>
+<div class="card">
+  <img src="Boeing 777X Background Removed.png" alt="Airplane Image">
+  <h2>Boeing 777X</h2>
+  <p>Capacity: 384-426 passengers<br>
+    Length: 76.7 meters<br>
+    Range: 7,525 nautical miles<br>
+    Maximum Cruise Speed: Mach 0.84<br></p>
+</div>
+<div class="card">
+  <img src="Boeing 787 DreamLiner Background Removed.png" alt="Airplane Image">
+  <h2>Boeing 787 Dreamliner</h2>
+  <p>Capacity: 242-330 passengers<br>
+    Length: 56.7 meters<br>
+    Range: 7,530 nautical miles<br>
+    Maximum Cruise Speed: Mach 0.85<br></p>
+</div>
+
+      <!-- Repeat the above div block for all airplanes -->
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const cards = document.querySelectorAll('.card');
+      
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animation = 'floatUp 4s'; // Add your floatUp animation
+          }
+        });
+      });
+
+      cards.forEach(card => {
+        observer.observe(card);
+      });
+    });
+  </script>
+</section>
+
+
+</body>
+</html>
