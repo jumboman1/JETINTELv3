@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Military Aircrafts</title>
+    <link rel="stylesheet" href="comafsstyles.css">
+
+
+</head>
+<body>
+
+  <!-- Load menubar.html dynamically -->
+  <div id="menubar-container"></div>
+  <script>
+    // Use fetch to load menubar.html
+    fetch('menubar.html')
+      .then(response => response.text())
+      .then(data => {
+        // Inject the content into the menubar-container
+        document.getElementById('menubar-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading menubar.html:', error));
+  </script>
+
+  <section class="container">
+    <h1 id="slogan-text">Military Aircrafts</h1>
+      <div class="card">
+        <img src="McDonnell Douglas F-15 Eagle Background Removed.png" alt="Airplane Image">
+        <h2>McDonnell Douglas F-15 Eagle</h2>
+        <p>Maximum Speed: Mach 2.5+<br>
+          Range: 3,450 nautical miles<br></p>
+    </div>
+    <div class="card">
+      <img src="Lockheed Martin F-22 Raptor Background Removed.png" alt="Airplane Image">
+      <h2>Lockheed Martin F-22 Raptor</h2>
+      <p>Maximum Speed: Mach 2.25+<br>
+        Range: 1,840 nautical miles<br></p>
+  </div>
+    <div class="card">
+        <img src="Dassault Rafale Background Removed.png" alt="Airplane Image">
+        <h2>Dassault Rafale</h2>
+        <p>Maximum Speed: Mach 1.8<br>
+          Range: 2,300 nautical miles<br></p>
+    </div>
+    <div class="card">
+      <img src="Mikoyan-Gurevich MiG-21 Background Removed.png" alt="Airplane Image">
+      <h2>Mikoyan-Gurevich MiG-21</h2>
+      <p>Maximum Speed: Mach 2.1<br>
+        Range: 800 nautical miles<br></p>
+  </div>
+
+  <div class="card">
+  <img src="Eurofighter Typhoon Background Removed.png" alt="Airplane Image">
+  <h2>Eurofighter Typhoon</h2>
+  <p>Maximum Speed: Mach 2+<br>
+    Range: 1,840 nautical miles<br></p>
+  </div>
+
+<div class="card">
+  <img src="Sukhoi Su-30MKI Background Removed.png" alt="Airplane Image">
+  <h2>Sukhoi Su-30MKI</h2>
+  <p>Maximum Speed: Mach 2<br>
+    Range: 1,930 nautical miles<br></p>
+</div>
+
+<div class="card">
+  <img src="F-16 Background Removed.png" alt="Airplane Image">
+  <h2>General Dynamics F-16 Fighting Falcon</h2>
+  <p>Maximum Speed: Mach 2+<br>
+    Range: 2,665 nautical miles<br></p>
+</div>
+
+
+
+
+
+      <!-- Repeat the above div block for all airplanes -->
+  </section>
+
+  <script> 
+      document.addEventListener('DOMContentLoaded', function() {
+          const cards = document.querySelectorAll('.card');
+          cards.forEach((card) => {
+              card.style.animation = 'fadeIn 1s';
+          });
+      });
+  </script>
+</body>
+</html>
